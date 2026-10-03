@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fashion Store — Catalog, Offers & WhatsApp Orders</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topbar" id="topbar" hidden></div>
+
+<header class="nav">
+  <a class="logo" href="#top" id="logo"></a>
+  <nav>
+    <a href="#offers">Offers</a><a href="#shop">Shop</a><a href="#contact">Contact</a>
+    <button class="link" id="adminBtn" title="Owner login">Owner</button>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div>
+      <span class="eyebrow" id="season"></span>
+      <h1 id="hTitle"></h1>
+      <p id="hSub"></p>
+      <div class="cta">
+        <a class="btn dark" href="#shop">Shop now</a>
+        <button class="btn ghost" id="shareCatalogHero">Get catalog on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="offers" class="wrap">
+    <h2>Seasonal offers</h2>
+    <div class="offers" id="offerList"></div>
+  </section>
+
+  <section id="shop" class="wrap">
+    <div class="shop-head">
+      <h2>Our collection</h2>
+      <button class="btn wa" id="shareCatalog">Share catalog on WhatsApp</button>
+    </div>
+    <div class="controls">
+      <div class="tabs" id="cats"></div>
+      <input type="search" id="q" placeholder="Search products…">
+      <select id="sort">
+        <option value="new">Newest</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No products found.</p>
+  </section>
+
+  <section id="contact" class="wrap">
+    <h2>Visit or message us</h2>
+    <div class="contact">
+      <div class="box"><h3>Store</h3><p id="addr"></p><p id="hours"></p></div>
+      <div class="box"><h3>Talk to us</h3>
+        <p><a class="btn wa" id="waBtn" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+        <p><a class="btn ghost" id="callBtn">Call us</a></p></div>
+    </div>
+  </section>
+</main>
+
+<footer id="foot"></footer>
+
+<div class="cartbar" id="cartbar"><span id="cartTxt"></span><button class="btn wa" id="cartBtn">View order</button></div>
+
+<!-- product dialog -->
+<dialog id="pd"><div id="pdBody"></div></dialog>
+
+<!-- order dialog -->
+<dialog id="od">
+  <h3>Your order</h3>
+  <div id="oLines"></div>
+  <div class="coupon"><input id="oCode" placeholder="Offer code"><button class="btn ghost" id="oApply">Apply</button></div>
+  <div class="msg" id="oMsg"></div>
+  <div class="totals" id="oTotals"></div>
+  <label>Your name<input id="oName"></label>
+  <label>Delivery address / pickup<textarea id="oAddr" rows="2"></textarea></label>
+  <div class="actions"><button class="btn ghost" id="oClose">Close</button><button class="btn wa grow" id="oSend">Send order on WhatsApp</button></div>
+</dialog>
+
+<!-- admin dialog -->
+<dialog id="ad"><div id="adBody"></div></dialog>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
